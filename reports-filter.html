@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sophictec | Health Meets Software</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="dashboard">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" width="176" />
+                </a>
+                <!-- Navigation -->
+                <div class="navbar-left visible-sm-block visible-md-block visible-lg-block" id="dash-header">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li><a href="#">Create New Survey</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <button type="submit" id="logout" class="btn btn-secondary">LOGOUT</button>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+        <!-- Welcome Section -->
+        
+
+        <div id="report" class="visible-sm-block visible-md-block visible-lg-block">
+            <div class="container-fluid">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div id="filter" class="affix col-sm-4">
+                            <h2>Filters</h2>
+                            
+                            <form method="#">
+                                <div class="form-group">
+
+                                    
+                                    <div class="filter-item age dropdown">
+                                        <label for="Age" class="control-label">Age:</label>
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                            20-30 years old<span class="caret"></span>
+                                        </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
+                                        </li>
+                                    </ul>
+                                    </div>
+
+                                    <div class="filter-item sex">
+                                        <label> Sex:</label>
+                                        <input type="radio" name="gender" id="bloke" value="M">
+                                        <label for="bloke" class="choice selected">Male</label>
+                                            <input type="radio" name="gender" id="sheila" value="F">
+                                        <label for="sheila" class="choice">Female</label>
+                                    </div>
+
+                                    <div class="filter-item ethnicity dropdown">
+                                        <label for="Age" class="control-label">Ethnicity:</label>
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                            Selected Ethnicity<span class="caret"></span>
+                                        </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
+                                        </li>
+                                        
+                                    </ul>
+                                    </div>
+
+                                    <div class="filter-item fam-history">
+                                        <label> MS Familiy History:</label>
+                                        <input type="radio" name="gender" id="opt-yes" value="M">
+                                        <label for="opt-yes" class="choice">Yes</label>
+                                        <input type="radio" name="gender" id="opt-no" value="F">
+                                        <label for="opt-no" class="choice">No</label>
+                                    </div>
+
+                                    <div class="filter-item duration">
+                                        <label> MS Disease Duration:</label>
+                                        <div class="icon icn-duration">
+                                        <input type="text" class="datepicker form-control" name="SurveyDuration" placeholder="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="filter-item first-symptom">
+                                        <label> Time From 1st Symptom:</label>
+                                        <div class="icon icn-symptom">
+                                        <input type="text" class="datepicker form-control" name="SurveyDuration" placeholder="" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="filter-item smoking">
+                                        <label> Smoking:</label>
+                                        <input type="radio" name="gender" id="smoke-yes" value="Y">
+                                        <label for="smoke-yes" class="choice">Yes</label>
+                                            <input type="radio" name="gender" id="smoke-no" value="N">
+                                        <label for="smoke-no" class="choice selected">No</label>    
+                                    </div>
+                                    <button class="btn btn-primary btn-lg btn-block">GENERATE REPORTS</button>
+
+                                    <button class="lnk"> Advanced Filters</button>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div id="filter-info" class="col-sm-8 col-sm-offset-4">
+                            <div class="report-info">
+                                
+                                <button class="btn btn-primary dlbtn">DOWNLOAD REPORTS </button>
+                                <h2 class="cat-title">NeuroQOL Outcome</h2>
+                                <div class="chart-container">
+
+                                    <img src="images/chart.jpg" width="600">
+
+                                    
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/bootstrap-datepicker.js"></script>
+    <script src="javascripts/jquery.autogrow-textarea.js"></script>
+    <script src="javascripts/sophictec.js"></script>
+    <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+        $('textarea').autogrow();
+    </script>
+</body>
+
+</html>

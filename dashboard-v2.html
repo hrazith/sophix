@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sophictec | Health Meets Software</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="dashboard">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" width="176" /></a><!-- Navigation -->
+                <div class="navbar-left visible-sm-block visible-md-block visible-lg-block" id="dash-header">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li><a href="#">Profile</a>
+                        </li>
+                        <!-- <li class="disabled"><a href="#">Rewards</a>
+                        </li> -->
+                        <li><a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                        <div id="notifications" class="visible-sm-block visible-md-block visible-lg-block">
+                            <!--<span class="count">2</span>-->
+<!--                            <img src="images/notification-icon.png" width="30" height="35" />-->
+                        </div>
+                        <button type="submit" id="logout" class="btn btn-secondary">LOGOUT</button>
+                    </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+        <!-- Welcome Section -->
+        <div id="welcome" class="visible-sm-block visible-md-block visible-lg-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="user-img" class="col-sm-1">
+                        <img src="images/person-dash-img.png" width="82" height="82" />
+                    </div>
+                    <div id="user-name" class="col-sm-5">
+                        <h1>Hello, Walter!</h1>
+<!--                        <p>20% Left Until Your Next Reward.</p>-->
+                    </div>
+                    <ul id="add-medical" class="col-sm-6">
+                        <li class="col-sm-3"><a href="#" data-toggle="modal" data-target="#mriModal"><img src="images/add-btn.png" width="42" height="42" />Add New MRI Data</a></li>
+                        <li class="col-sm-3"><a href="#" data-toggle="modal" data-target="#hospitalModal"><img src="images/add-btn.png" width="42" height="42" />Add ER/Hospital Visit</a></li>
+                        <li class="col-sm-3"><a href="#" data-toggle="modal" data-target="#hospitalModal"><img src="images/add-btn.png" width="42" height="42" />Add MS Relapse</a></li>
+                        <li class="col-sm-3"><a href="#" data-toggle="modal" data-target="#medicineModal"><img src="images/add-btn.png" width="42" height="42" />Add change
+in Medication</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MRI Modal -->
+        <div class="modal fade" id="mriModal" tabindex="-1" role="dialog" aria-labelledby="mriModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mriModalLabel">Add MRI Data</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-vertical">
+                    <div class="form-group">
+                        <label for="MRIDate" class="control-label">Date:</label>
+                        <input type="text" id="date" class="datepicker form-control" name="MRIDate" placeholder="MM/YYYY" />
+                    </div>
+                    <div class="form-group">
+                        <label for="MRIDesc">Description:</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter in your MRI Data"></textarea>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                <button type="button" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hospital Modal -->
+        <div class="modal fade" id="hospitalModal" tabindex="-1" role="dialog" aria-labelledby="mriModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mriModalLabel">Add MS Relapse Or ER/Hospital Visit</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-vertical">
+                    <div class="form-group">
+                        <label for="MRIDate" class="control-label">Date:</label>
+                        <input type="text" id="date" class="datepicker form-control" name="MRIDate" placeholder="MM/YYYY" />
+                    </div>
+                    <div class="form-group">
+                        <label for="MRIDesc">Description:</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter in your MRI Data"></textarea>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                <button type="button" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medicine Modal -->
+        <div class="modal fade" id="medicineModal" tabindex="-1" role="dialog" aria-labelledby="mriModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mriModalLabel">Add Change in Medication</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-vertical">
+                    <div class="form-group">
+                        <label for="MRIDate" class="control-label">Date:</label>
+                        <input type="text" id="date" class="datepicker form-control" name="MRIDate" placeholder="MM/YYYY" />
+                    </div>
+                    <div class="form-group">
+                        <label for="MRIDesc">Description:</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter in your MRI Data"></textarea>
+                    </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                <button type="button" class="btn btn-primary">ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="user-stats" class="container-fluid visible-sm-block visible-md-block visible-lg-block">
+            <div class="row">
+                <div class="col-sm-3">
+                    <p>Your Last Login Was On</p>
+                    <h2>2/20/2015</h2>
+                    <p>Friday, Feb. 20, 2015</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>You Are Patient</p>
+                    <h2>12 <span class="small">of</span> 2412</h2>
+                    <p>In This Effort</p>
+                </div>
+                <div class="col-sm-4">
+                    <p>Since Your Last Visit</p>
+                    <h2>22,000</h2>
+                    <p>Patients Have Visited Their Dashboard</p>
+                </div>
+                <div id="badge" class="text-center col-sm-2">
+                    <p>Your Badge:</p>
+                    <img src="images/badge.png" width="50" height="50" />
+                </div>
+            </div>
+        </div>
+
+        <div id="timeline-info" class="container-fluid visible-sm-block visible-md-block visible-lg-block">
+            <div class="row">
+                <div id="tip" class="col-sm-4 col-md-3">
+                    <h2>Did You Know?</h2>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper.</p>
+                </div>
+                <!-- Survey Content -->
+                <div id="artifact-info" class="col-sm-7 col-md-8">
+                    <div id="info">
+                        <h2>NeuroQOL Survey</h2>
+                        <span class="minutes">25 MIN</span>
+                        <p>Anticipated Time Commitment</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">START</button>
+                </div>
+
+                <!-- Survey Complete HTML
+                <div id="artifact-info" class="col-sm-6 col-md-8 complete">
+                    <div id="info">
+                        <h2>NeuroQOL Survey</h2>
+                        <span class="minutes">25 MIN</span>
+                        <p>Anticipated Time Commitment</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">START</button>
+                </div>
+                -->
+
+                <!-- Content added from three buttons in the welcome section
+                <div id="artifact-info" class="col-sm-6 col-md-8 med-add">
+                    <div id="info">
+                        <h2>Added Ampyra Medication</h2>
+                        <p>Se noster admodum exquisitaque, dolor hic doctrina, e culpa officia doctrina, id quorum senserit.</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+            <div id="timeline" class="container-fluid">
+                <div class="row">
+                    <a class="time-prev"><img src="images/time-prev.png" width="12" height="22"/></a>
+                    
+                    
+                    
+                    <div id="timeline-row" class="col-sm-12"/>
+                        <div id="current-date">
+                            <span class="dot"></span>
+                            <span class="line"></span>
+                        </div>
+                        <ul id="frag-hold" class="clearfix">
+                            <li>
+                                &nbsp;
+                            </li>
+                            <li>
+                                <div class="frag"><img src="images/survey-img.png" height="36" />
+                                <p>Begin NeuroQol Survey</p></div>
+                                <div class="surv-add counter"  data-badge="6"><img src="images/med-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="2"><img src="images/mri-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="4"><img src="images/relapse-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="2"><img src="images/er-btn.png" height="36" /></div>
+                            </li>
+                            <li>
+                                <div class="frag complete"><img src="images/complete-img.png" height="36" /><p>NeuroQol Survey<span class="done">COMPLETE!</span></p></div>
+                            </li>
+                            <li>
+                                <div class="surv-add counter"  data-badge="6"><img src="images/med-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="2"><img src="images/mri-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="4"><img src="images/relapse-btn.png" height="36" /></div>
+                                <div class="surv-add counter"  data-badge="2"><img src="images/er-btn.png" height="36" /></div>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul id="months" class="clearfix">
+                            <li>JAN</li>
+                            <li>FEB</li>
+                            <li>MAR</li>
+                            <li>APR</li>
+                            <li>MAY</li>
+                            <li>JUN</li>
+                            <li>JUL</li>
+                        </ul>
+                    </div>
+                    <a class="time-next"><img src="images/time-next.png" width="12" height="22"/></a>
+                <div id="year" class="clearfix">
+                    <a id="prev"><img src="images/time-prev.png" width="8" height="15"/></a>2015<a id="next"><img src="images/time-next.png" width="8" height="15"/></a>
+                </div>
+            </div>
+    </div>
+        <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/bootstrap-datepicker.js"></script>
+    <script src="javascripts/sophictec.js"></script>
+    <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
+</body>
+
+</html>

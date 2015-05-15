@@ -1,0 +1,13 @@
+
+.sass-cache/
+hooks/
+info/
+objects/
+branches/
+refs/
+
+config.rb
+HEAD
+.gitignore
+.DS_Store
+todo.txt

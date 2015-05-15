@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sophictec | Learn About Yourself</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="medication" class="quest">
+        <div class="container">
+          <div class="page-header">
+            <h1>Medication</h1>
+            <div class="add"><button class="btn btn-primary"> + Medication </button></div>
+          </div>
+          <div class="medtable">
+            <table class="table table-bordered">
+              <tr>
+                <th class="med">Medication</th>
+                <th class="dose">Dose</th>
+                <th>Frequency</th>
+                <th>Log</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td><input type="text" class="form-control" placeholder="enter medication"></td>
+                <td><input type="text" class="form-control"></td>
+                <td>
+                  <form class="cat-select">
+                     <select class="form-control">
+                         <option>Once a day</option>
+                         <option>Twice a day</option>
+                         <option>Thrice a day</option>
+                      </select>
+                  </form>
+                </td>
+                <td>
+                  <div class="log">
+                    <div class="date"><input type="text" class="form-control" placeholder="mm/dd/yyyy"></div>
+                    <div class="reason">
+                      <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="status">NEW</div>
+                  </div>
+                </td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>Prednisone</td>
+                <td>12 mg</td>
+                <td>Once a day</td>
+                <td>
+                  <div class="log">
+                    <div class="date">12/10/2014</div>
+                    <div class="reason">Extreame alergies. Runny nose. Sniffles and Bloodshot eyes.</div>
+                    <div class="status">NEW</div>
+                  </div>
+                </td>
+                <td><button class="btn btn-sm btn-secondary">Discontinue</button> <button class="btn btn-secondary btn-sm">Modify</button> <button class="btn btn-sm btn-danger"> x </button></td>
+              </tr>
+              <tr>
+                <td rowspan="3">Allegra</td>
+                <td class="kill-border">15 mg</td>
+                <td class="kill-border">Twice a day</td>
+                <td class="kill-border">
+                  <div class="log">
+                    <div class="date">08/04/2014</div>
+                    <div class="reason">Very mild alergies. Feeling well.</div>
+                    <div class="status">DISCONTINUED</div>
+                  </div>
+                </td>
+                <td rowspan="3"><button class="btn btn-sm btn-secondary">Modify</button> <button class="btn btn-sm btn-danger"> x </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="kill-border">18 mg</td>
+                <td class="kill-border">Twice a day</td>
+                <td class="kill-border">
+                  <div class="log">
+                    <div class="date">06/10/2013</div>
+                    <div class="reason">Milder symptoms. Lower dosage was recomended.</div>
+                    <div class="status">MODIFIED</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>22 mg</td>
+                <td>Thrice a day</td>
+                <td>
+                  <div class="log">
+                    <div class="date">06/10/2013</div>
+                    <div class="reason">Luctus magna a at, nibh nulla in aliquet, orci morbi. Facilisi phasellus sollicitudin nec, ante non, vel pellentesque, est nunc rutrum vel pellentesque tristique interdum.</div>
+                    <div class="status">NEW</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="2">Xertec</td>
+                <td class="kill-border"><input type="text" class="form-control"></td>
+                <td class="kill-border">
+                  <form class="cat-select">
+                     <select class="form-control">
+                         <option>Once a day</option>
+                         <option>Twice a day</option>
+                         <option>Thrice a day</option>
+                      </select>
+                  </form>
+                </td>
+                <td class="kill-border">
+                  <div class="log">
+                    <div class="date">
+                      <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                    </div>
+                    <div class="reason"><textarea class="form-control"></textarea></div>
+                    <div class="status">MODIFIY</div>
+                  </div>
+                </td>
+                <td rowspan="2"><button class="btn btn-sm btn-secondary">Modify</button> <button class="btn btn-sm btn-danger"> x </button>
+                </td>
+              </tr>
+              <tr>
+                <td>18 mg</td>
+                <td>Twice a day</td>
+                <td>
+                  <div class="log">
+                    <div class="date">06/10/2013</div>
+                    <div class="reason">Milder symptoms. Lower dosage was recomended.</div>
+                    <div class="status">NEW</div>
+                  </div>
+                </td>
+              </tr>
+              
+
+            </table>
+          </div>
+        </div><!-- /container -->
+                      
+                    
+    </div> <!-- /Learn -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/bootstrap-datepicker.min.js"></script>
+  </body>
+</html>

@@ -49,34 +49,60 @@
       </div>
     </div>
 
-    <div class="contact row">
-      <!-- Example row of columns -->
-      <form>
-          <fieldset class="contactform">
-            <label class="name" for="name">Enter your name: </label><br>
-            <input name="name"/><br><br>
-            <label for="email">Email address: </label><br>
-            <input name="email"/><br><br>
-            <label class="subject" for="subject">Message subject: </label><br>
-            <input name="subject"/><br><br>
-            <label for="message">Enter your message: </label><br>
-            <textarea rows="4" cols="50" name="message" size=></textarea><br>
-          </fieldset>
-         <br>
-          <fieldset class="formbtn">
-            <input type="checkbox">Email a copy of this message to your own address</input><br><br>
-            <input class="btn" type="submit" value="Send"/>
-            
-          </fieldset>
-      </form>
-      <br>
-      <footer>
-	    <hr>
-        <p>&copy; Company 2014</p>
-      </footer>
-    </div> <!-- /container -->
+
+    
+
+
+
+    <div class="contact-form  col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+     
+    <div class="row">
+      <ul class="contactus">
+        <li>
+         <label class="desc" for="Field1">Name<span class="req">*</span></label>
+          <div  class="contactname">
+            <input id="Field1" name="Field1" type="text" class="form-control" value="" maxlength="255">
+          </div>
+        </li>
+        <li>
+          <label class="desc" for="Field2">Email<span class="req">*</span></label>
+          <div>
+            <input name="Field2" type="text" class="form-control" value="" maxlength="255" >
+          </div>
+        </li>
+        <li>
+          <label class="desc" id="title2" for="Field3">Message subject<span class="req">*</span></label>
+            <div>
+              <input id="Field3" name="Field3" type="email" spellcheck="false" class="form-control" value="" maxlength="255" >
+            </div>
+        </li>
+        <li>
+          <label class="desc" id="title8" for="Field8">Enter your message<span id="req_8" class="req">*</span></label>
+
+        <div>
+          <textarea id="Field8" name="Field8" class="form-control" spellcheck="true" rows="8" cols="40" tabindex="4" onkeyup="handleInput(this); " onchange="handleInput(this);" required=""></textarea>
+        </div>
+        </li>
+        <li>
+                <div class="form-group col-sm-12">
+                   <button type="submit"  class="btn btn-primary btn-lg btn-block">SEND</button>
+                </div>
+        </li>
+
+  </ul>
+  </div>
 
 </div>
+
+
+      <footer id="reg-footer">
+        <p>&copy; Sophictec 2015</p>
+      </footer>
+
+
+    </div> <!-- /container -->
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
